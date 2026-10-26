@@ -1,0 +1,144 @@
+*{
+    padding:0px;
+    margin:auto;
+    box-sizing: border-box;
+}
+body {
+  font-family: 'Noto Sans Myanmar', sans-serif;
+}
+:root{
+    --yellow-color:rgb(63, 63, 2);
+    --yellowlight-color:yellow;
+    --white-color:#ffffff;
+    --gray-color:#dadada;
+    --green-color:#40960a;
+    --green-light:#a8c082;
+    --black-color:black;
+    --graylight-color:#E2E8F0;
+}
+.header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:10px 20px;
+    background:var(--yellow-color);
+}
+.header img{
+    width: 75px;
+    height: 75px;
+}
+.header ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap:150px;
+    font-weight: bold;
+    font-size:20px;
+
+}
+.header ul a{text-decoration: none;
+    color:var(--yellowlight-color);
+}
+
+.header ul li::after{
+    content:'';
+    background: var(--green-color);
+    display:block;
+    width:0%;
+    height:2px;
+}
+.header ul li:hover::after{
+    width:100%;
+    transition:0.5s;
+    margin:auto;
+}
+.header ul li a:hover{color: var(--white-color);}
+
+.registration_form{display:flex;
+justify-content: space-between;}
+
+.registration_form p{text-align:center;
+font-size: 11pt;}
+
+.registration{
+    line-height: 32pt;
+    padding:20px;
+    font-size:10pt;
+}
+
+.yangon_airport_map {
+  width: 100%;
+  max-width: 350px;
+  height: 200px; 
+  margin: 0 auto; 
+}
+
+.yangon_airport_map p{line-height: 20pt;
+margin-bottom:20px;}
+
+/* footer */
+.footer{
+    background-color: var(--graylight-color);
+    border-top:1px solid #292524;
+    text-align:center;
+    padding:10px 5px;
+}
+.address{
+    font-weight: bold;
+    font-size:14pt;
+}
+
+
+/* responsive */
+@media(max-width:800px)
+{
+.header ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap:20px;
+    font-weight: bold;
+    font-size:14px;
+
+}
+.header img{
+    width: 60px;
+    height: 60px;
+}
+
+.registration_form{
+    flex-direction: column;
+}
+.yangon_airport_map iframe{
+    width:250px;
+    height: 150px;
+}
+
+}
+
+
+@media(max-width:600px)
+{
+.header ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-weight: bold;
+    font-size:12px;
+
+}
+.header img{
+    width: 40px;
+    height: 40px;
+}
+.registration_form{
+    flex-direction: column;
+}
+.yangon_airport_map iframe{
+    width:250px;
+    height: 150px;
+    margin:0px 30px;
+}
+.yangon_airport_map p{font-size:9pt;}
+}
